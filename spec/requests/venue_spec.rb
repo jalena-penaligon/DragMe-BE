@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe "Venues API" do
   it "sends a list of venues" do
-    venue_1 = Venue.create(name: "Venue Name 1", google_id: "a;lsdfljasdf", lat: "124223", long: "321298")
-    venue_2 = Venue.create(name: "Venue Name 2", google_id: "a;lsdfljasdf", lat: "124223", long: "321298")
+    venue_1 = Venue.create(name: "Venue Name 1", google_id: "a;lsdfljasdf")
+    venue_2 = Venue.create(name: "Venue Name 2", google_id: "a;lsdfljasdf")
     get '/api/v1/venues'
 
     expect(response).to be_successful
@@ -14,8 +14,8 @@ describe "Venues API" do
   end
 
   it "displays 1 venue" do
-    venue_1 = Venue.create(name: "Venue Name 1", google_id: "a;lsdfljasdf", lat: "124223", long: "321298")
-    venue_2 = Venue.create(name: "Venue Name 2", google_id: "a;lsdfljasdf", lat: "124223", long: "321298")
+    venue_1 = Venue.create(name: "Venue Name 1", google_id: "a;lsdfljasdf")
+    venue_2 = Venue.create(name: "Venue Name 2", google_id: "a;lsdfljasdf")
     get "/api/v1/venues/#{venue_1.id}"
 
     expect(response).to be_successful
