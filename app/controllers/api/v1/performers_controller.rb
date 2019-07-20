@@ -4,8 +4,7 @@ class Api::V1::PerformersController < ApplicationController
       render status: 200,
       json: {
         performer: performer,
-        # shows: venue.shows
       }
     end
-  end
+end
   
