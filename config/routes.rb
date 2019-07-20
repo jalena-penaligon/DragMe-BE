@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root "welcome#index"
+
   namespace :api do
     namespace :v1 do
 
@@ -8,4 +11,7 @@ Rails.application.routes.draw do
       get '/venues/:id/shows', to: 'venues/shows#index'
     end
   end
+
+  # get 'auth/instagram', as: "insta_login"
+  get '/auth/instagram/callback', to: "performers#create"
 end
