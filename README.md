@@ -129,16 +129,6 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
         updated_at: "2019-07-20T19:50:01.284Z"
         }]
 
-  #### GET http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues/:id
-      Sample Response:
-        {
-        id: 9,
-        venue_name: "The Clocktower Cabaret",
-        venue_google_id: "ChIJASbMldp4bIcRiFeLsW3CUf4",
-        created_at: "2019-07-20T19:50:01.281Z",
-        updated_at: "2019-07-20T19:50:01.281Z"
-        }
-
   #### POST http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues
       Headers:
         Content-Type: application/json
