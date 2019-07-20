@@ -1,5 +1,16 @@
 require 'date'
 
+venues = Venue.all
+shows - Show.all
+
+venues.each do |venue|
+  venue.destroy
+end
+
+shows.each do |show|
+  show.destroy
+end
+
 clocktower = Venue.create!(venue_name: "The Clocktower Cabaret", venue_google_id: "ChIJASbMldp4bIcRiFeLsW3CUf4")
 hamburgermarys = Venue.create!(venue_name: "Mile High Hamburger Mary's", venue_google_id: "ChIJL4ZMpzN5bIcRe_ttaF-7N3E")
 tracks = Venue.create!(venue_name: "Tracks", venue_google_id: "ChIJU0l3jxp5bIcRcOzzQKHMBcM")
