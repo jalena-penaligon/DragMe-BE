@@ -10,7 +10,7 @@ class Api::V1::ShowsController < ApplicationController
 
   def create
     if params["venue_id"] == nil
-      venue = Venue.create(name: params["venue_name"], google_id: params["venue_google_id"])
+      venue = Venue.create(venue_name: params["venue_name"], venue_google_id: params["venue_google_id"])
     else
       venue = Venue.find(params["venue_id"])
     end
