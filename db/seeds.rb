@@ -1,14 +1,14 @@
 require 'date'
 
-venues = Venue.all
 shows = Show.all
-
-venues.each do |venue|
-  venue.destroy
-end
+venues = Venue.all
 
 shows.each do |show|
   show.destroy
+end
+
+venues.each do |venue|
+  venue.destroy
 end
 
 clocktower = Venue.create!(venue_name: "The Clocktower Cabaret", venue_google_id: "ChIJASbMldp4bIcRiFeLsW3CUf4")
