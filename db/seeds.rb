@@ -1,7 +1,7 @@
 require 'date'
 
 venues = Venue.all
-shows - Show.all
+shows = Show.all
 
 venues.each do |venue|
   venue.destroy
