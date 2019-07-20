@@ -19,7 +19,7 @@ class InstagramService
    .post('oauth/access_token', {client_id: "b3445eaff7de4e8e8c29a7071e84540c",
                                 client_secret: "402247e52e1b4059acba7099fa34470a",
                                 grant_type: "authorization_code",
-                                redirect_uri: "http://localhost:3000/auth/instagram/callback",
+                                redirect_uri: "http://dragme.us-east-2.elasticbeanstalk.com/auth/instagram/callback",
                                 code: @code})
  end
 end
