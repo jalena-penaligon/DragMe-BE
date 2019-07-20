@@ -2,7 +2,7 @@
 
 ## Production URL
 
-This API is available in production at https://dragme-be.herokuapp.com/
+This API is available in production at http://dragme.us-east-2.elasticbeanstalk.com/
 
 ## Instructions
   ### Available Endpoints:
