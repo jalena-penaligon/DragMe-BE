@@ -211,19 +211,19 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
   - If the performer does not exist, a performer is created and is returned as an object.
   - If the performer exists, the performer is located in the database and returned as an object.  
 
-      Sample Response:
-      {
-        id: 1,
-        name: "Jalena Taylor",
-        bio: "If I had an instagram bio it would go here.",
-        instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db",
-        photo: "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
-        insta_url: "https://www.instagram.com/jalena.marie/",
-        facebook_url: null,
-        twitter_url: null,
-        created_at: "2019-07-20T19:26:26.643Z",
-        updated_at: "2019-07-20T19:26:26.643Z"
-      }
+        Sample Response:
+        {
+          id: 1,
+          name: "Jalena Taylor",
+          bio: "If I had an instagram bio it would go here.",
+          instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db",
+          photo: "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+          insta_url: "https://www.instagram.com/jalena.marie/",
+          facebook_url: null,
+          twitter_url: null,
+          created_at: "2019-07-20T19:26:26.643Z",
+          updated_at: "2019-07-20T19:26:26.643Z"
+        }
 
 ## Schema
 ![Database Schema](schema.png)
