@@ -27,3 +27,5 @@ freshfish = charlies.shows.create(name: "Fresh Fish Fridays", date: DateTime.new
 drag_decades_nov = blush.shows.create(name: "", date: DateTime.new(2019,8,14,20,00,0), description: "A fresh and unique monthly local charity benefit show with ALL LIVE performances with drag entertainers, musicians, vocalists, boylesque, belly dancers, stand up comedy, and much more!", poster_url: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/53434989_347181116129823_1954368088577146880_o.jpg?_nc_cat=101&_nc_oc=AQkFGKxHMxovLHaTnswgCBHhTt1beP-WXai7uVPsvJbHkXnLFfsDELrKIfD6PG2RFSLYeSJDEd2k9mJRYjmg1PwD&_nc_ht=scontent.fapa1-1.fna&oh=a20ebc389f367c0213a282a74ca5e72a&oe=5DBDB8B3", event_url: "https://www.facebook.com/events/562486420885991/")
 
 # drag_decades_nov = hamburgermarys.shows.create(name: "", date: DateTime.new(2019, 11, 01, 20, 00, 0), description: "", poster_url: "", event_url: "")
+
+performer = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
