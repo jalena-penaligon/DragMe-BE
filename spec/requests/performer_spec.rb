@@ -28,7 +28,13 @@ describe "Performers API" do
   end
 
   it 'can delete a performer' do
+    performer1 = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
+    performer2 = Performer.create(name: "Bootylicious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dude", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
     
+    delete "/api/v1/performers/#{performer1.id}"
+
+    expect(response).to be_successful
+    expect(Performer.all.count).to eq(1)
   end
 
 end
