@@ -31,7 +31,6 @@ femmebots = hamburgermarys.shows.create!(name: "Femmebots with Electra Dupri", d
 bellas = hamburgermarys.shows.create!(name: "Bella’s Cooter Catwalk", date: DateTime.new(2019,7,28,20,00,0), description: "Cooter Cat Walk! An all new high-fashion high energy Drag event. Hosted by Bella Couture-Le Cher with a rotating cast throwing high-fashion looks!", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2019/02/cooterSunday-1024x576.jpeg", event_url: "https://www.hamburgermarys.com/denver/events/event/bellas-cooter-catwalk/")
 maryoke = hamburgermarys.shows.create!(name: "Mary-OKE!", date: DateTime.new(2019,8,1,21,00,0), description: "Join your host Allison Young every Thursday night to sing your heart out!  Over 250,000 songs to choose from with great food and cocktails to keep you going.", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2018/01/MaryOke.jpg", event_url: "https://www.hamburgermarys.com/denver/events/event/mary-oke/")
 
-
 performer = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
 
 performer_show = ShowPerformer.create(performer_id: performer.id, show_id: dragnation.id)
