@@ -35,4 +35,26 @@ describe "Venues API" do
     expect(response).to be_successful
     venue = JSON.parse(response.body)
   end
+
+  it 'can delete a venue' do
+    venue_1 = Venue.create(venue_name: "Venue Name 1", venue_google_id: "a;lsdfljasdf")
+    venue_2 = Venue.create(venue_name: "Charlie's Nightclub Denver", venue_google_id: "ChIJydsjLC15bIcRcnnY3EIbTgs")
+
+    
+    delete "/api/v1/venues/#{venue_1.id}"
+
+    expect(response).to be_successful
+    expect(Venue.all.count).to eq(1)
+  end
+
+  it 'can create a venue' do 
+    body = {venue_name: "Larry's Catwalk", venue_google_id: "123"}
+
+    post "/api/v1/venues", params: body
+
+    expect(Venue.last.name).to eq("Larry's Catwalk")
+
+
+  end
+
 end

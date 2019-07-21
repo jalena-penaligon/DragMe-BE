@@ -7,6 +7,7 @@ SimpleCov.start do
   add_filter 'config'
 end
 
+require 'capybara'
 
 
 RSpec.configure do |config|
@@ -21,6 +22,5 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
 
 end

@@ -36,5 +36,5 @@ end
 private
 
   def venue_params
-    params.require(:venue).permit(:name, :google_id)
+    params.require(:venue).permit(:venue_name, :venue_google_id)
   end
