@@ -29,3 +29,5 @@ drag_decades_nov = blush.shows.create(name: "", date: DateTime.new(2019,8,14,20,
 # drag_decades_nov = hamburgermarys.shows.create(name: "", date: DateTime.new(2019, 11, 01, 20, 00, 0), description: "", poster_url: "", event_url: "")
 
 performer = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
+
+performer_show = ShowPerformer.create(performer_id: performer.id, show_id: dragnation.id)
