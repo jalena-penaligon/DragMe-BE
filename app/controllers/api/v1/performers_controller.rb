@@ -1,19 +1,10 @@
 class Api::V1::PerformersController < ApplicationController
     def index
-      performer = Performer.all
-      render status: 200,
-      json: {
-        performer: performer,
-      }
+      render json: Performer.all
     end
 
     def show 
-      performer = Performer.find(params[:id])
-      render status: 200, 
-      json: {
-        performer: performer, 
-        shows: performer.shows
-      }
+      render json: PerformerSerializer.new(Performer.find(params[:id]))
     end
 
 
