@@ -48,13 +48,12 @@ describe "Venues API" do
   end
 
   it 'can create a venue' do 
-    body = {venue_name: "Larry's Catwalk", venue_google_id: "123"}
-
+    body = {venue: {venue_name: 'Larry Catwalk', venue_google_id: '123'}}
+ 
     post "/api/v1/venues", params: body
 
-    expect(Venue.last.name).to eq("Larry's Catwalk")
 
-
+    expect(Venue.last.venue_name).to eq("Larry Catwalk")
   end
 
 end
