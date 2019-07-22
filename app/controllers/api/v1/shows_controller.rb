@@ -5,7 +5,12 @@ class Api::V1::ShowsController < ApplicationController
   end
 
   def show
-    render json: ShowSerializer.new(Show.find(params[:id]))
+    show = Show.find(params[:id])
+    render status: 200,
+    json: {
+      show: ShowSerializer.new(show),
+      performers: show.performers
+    }
   end
 
   def create
