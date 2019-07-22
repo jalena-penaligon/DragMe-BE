@@ -8,11 +8,11 @@ Rails.application.routes.draw do
       resources :venues, only: [:index, :create, :destroy]
       resources :shows, only: [:index, :show, :create, :destroy]
       resources :performers
-      
+
 
       get '/venues/:id/shows', to: 'venues/shows#index'
+      get '/auth/instagram/callback', to: "performers#create"
     end
   end
 
-  get '/auth/instagram/callback', to: "performers#create"
 end
