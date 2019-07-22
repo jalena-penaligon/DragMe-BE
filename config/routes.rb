@@ -9,11 +9,10 @@ Rails.application.routes.draw do
       resources :shows, only: [:index, :show, :create, :destroy]
       resources :performers
       resources :users, only: [:index, :show, :create, :destroy]
-      
 
       get '/venues/:id/shows', to: 'venues/shows#index'
     end
   end
+  get '/auth/instagram/callback', to: "api/v1/performers#create"
 
-  get '/auth/instagram/callback', to: "performers#create"
 end
