@@ -53,4 +53,4 @@ performer_4 = Performer.create(name: "Felony Misdemeanor", bio: "Serving some de
 performer_show = ShowPerformer.create(performer_id: performer.id, show_id: dragnation.id)
 
 # User
-user = User.create(email: "Jacob@example.com", password: "password", api_key: "fakekey" )
+user = User.create(email: "Jacob@example.com", password_digest: "password", api_key: "fakekey" )
