@@ -51,3 +51,6 @@ performer_3 = Performer.create(name: "Kai Lee Mykles", bio: "Working as a choir 
 performer_4 = Performer.create(name: "Felony Misdemeanor", bio: "Serving some delicious and raunchy realness during Sunday Funday brunch at Steuben's Uptown. Bring earmuffs for the kiddos cause these queens entertain at a rating well above PG-13!" , instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057bruh", insta_url: "https://www.instagram.com/felony_misdemeanor/?hl=en", facebook_url: "https://www.facebook.com/events/steubens-uptown/steubens-drag-brunch-with-felony-misdemeanor/2242784222600344/" , twitter_url: "https://twitter.com/felonym?lang=en")
 
 performer_show = ShowPerformer.create(performer_id: performer.id, show_id: dragnation.id)
+
+# User
+user = User.create(email: "Jacob@example.com", password: "password", api_key: "fakekey" )
