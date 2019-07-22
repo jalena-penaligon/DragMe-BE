@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
 
       get '/venues/:id/shows', to: 'venues/shows#index'
-      get '/auth/instagram/callback', to: "performers#create"
     end
   end
+  get '/auth/instagram/callback', to: "api/v1/performers#create"
 
 end
