@@ -38,4 +38,15 @@ describe "Shows API" do
     expect(Show.all.count).to eq(1)
   end
 
+  it 'can create a show' do 
+    venue_1 = Venue.create(venue_name: "Venue Name 1", venue_google_id: "a;lsdfljasdf")
+    body =  {show: {name: 'Larry Catwalk', date: "2019-08-02T20:00:00.000Z", description: "Super great show! Super Fun!", poster_url: "URL", event_url: "URL" , venue_id: venue_1.id},
+              venue_id: venue_1.id }
+ 
+    post "/api/v1/shows", params: body
+
+
+    expect(Show.last.name).to eq("Larry Catwalk")
+  end
+
 end
