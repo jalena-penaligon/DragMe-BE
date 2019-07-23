@@ -21,7 +21,9 @@ class Api::V1::ShowsController < ApplicationController
     end
     show = venue.shows.create(show_params)
     if show.save
+      ShowPerformer.add_performers(params[:performers], show.id)
       render json: ShowSerializer.new(show)
+      
     else
       render status: 409,
       json: {
@@ -29,6 +31,17 @@ class Api::V1::ShowsController < ApplicationController
         message: "Something went wrong."
       }
     end
+  end
+
+  def update 
+    show = Show.find(params[:id])
+    show.update(show_params)
+    ShowPerformer.update_performers(params[:performers], show)
+    render status: 200,
+    json: {
+      show: ShowSerializer.new(show),
+      performers: show.performers
+    }
   end
 
   def destroy
