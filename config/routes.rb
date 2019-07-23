@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     namespace :v1 do
 
       resources :venues, only: [:index, :create, :destroy]
-      resources :shows, only: [:index, :show, :create, :destroy]
+      resources :shows
       resources :performers
       resources :users, only: [:index, :show, :create, :destroy]
 
