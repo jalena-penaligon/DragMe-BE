@@ -186,34 +186,131 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
             created_at: "2019-07-20T19:50:01.338Z",
             updated_at: "2019-07-20T19:50:01.338Z"
           }]
-        }    
+        }   
 
-  ### Performer OAuth:
-  To create a performer with OAuth, the front-end will need to direct to the following URL:
+  #### GET http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers
+      Sample Response:
+      [{
+        id: 2,
+        name: "Jalena Taylor",
+        bio: "",
+        instagram_token: "15940466.b3445ea.b3e1d1e5",
+        photo: "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+        insta_url: "https://www.instagram.com/jalena.marie/",
+        facebook_url: null,
+        twitter_url: null,
+        created_at: "2019-07-22T21:59:55.490Z",
+        updated_at: "2019-07-22T21:59:55.490Z"
+      },
+      {
+        id: 3,
+        name: "Jacob Bogart",
+        bio: "mainly dogs and woods",
+        instagram_token: "5612235.b3445ea.9a4ccbe394",
+        photo: "https://scontent.cdninstagram.com/vp/94c7ca1f5de715b6d8371b39d1ee61c2/5DE7FE01/t51.2885-19/s150x150/11417400_702333426577772_2015635595_a.jpg?_nc_ht=scontent.cdninstagram.com",
+        insta_url: "https://www.instagram.com/jacobogart/",
+        facebook_url: null,
+        twitter_url: null,
+        created_at: "2019-07-22T22:26:21.473Z",
+        updated_at: "2019-07-22T22:26:21.473Z"
+      }]
 
-      https://api.instagram.com/oauth/authorize/
-      Params:
-        { client_id: b3445eaff7de4e8e8c29a7071e84540c,
-          redirect_uri: http://dragme.us-east-2.elasticbeanstalk.com/auth/instagram/callback,
-          response_type: code
+  #### GET http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/:id
+      Sample Response:
+      {
+        data: {
+          id: "1",
+          type: "performer",
+          attributes: {
+            name: "Vivacious",
+            bio: "Best queen in town!",
+            instagram_token: "15940466.b3445ea.f5eaa7f9acf243",
+            photo: null,
+            insta_url: "https://www.instagram.com/naomismalls/",
+            facebook_url: "www.facebook.com",
+            twitter_url: "www.twitter.com",
+            shows: [
+              {
+                id: 9,
+                name: "Drag Nation Dynasty ft. Ra'Jah O'Hara",
+                date: "2019-07-26T21:00:00.000Z",
+                description: "The Nation's Best Drag Show with the Hottest Celebrity Drag Queens!",
+                event_url: "https://tracksdenver.com/event/drag-nation-2/",
+                poster_url: "https://tracksdenver.com/wp-content/uploads/2019/06/07_26_DragNation_11x17-copy.jpg",
+                venue_id: 3,
+                created_at: "2019-07-23T17:16:15.621Z",
+                updated_at: "2019-07-23T17:16:15.621Z"
+              }
+            ]
+          }
         }
+      }
 
-  - If the performer does not exist, a performer is created and is returned as an object.
-  - If the performer exists, the performer is located in the database and returned as an object.  
+  #### POST http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/
+        Headers:
+          Content-Type: application/json
+          Accept: application/json
+
+        Body:
+        {
+          "instagram_token": "15940466.b3445ea.b3e1d1e6",
+        }
 
         Sample Response:
+          Status: 200
+          Body:
+            {
+              "performer": {
+                  "id": 1,
+                  "name": "Jalena Taylor",
+                  "bio": "Aspiring queen",
+                  "instagram_token": "15940466.b3445ea.b3e1d1e6",
+                  "photo": "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+                  "insta_url": "https://www.instagram.com/jalena.marie/",
+                  "facebook_url": "facebook.com",
+                  "twitter_url": "twitter.com",
+                  "created_at": "2019-07-23T17:16:15.641Z",
+                  "updated_at": "2019-07-23T17:21:14.059Z"
+              }
+            }    
+
+  #### PUT http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/:id
+        Headers:
+          Content-Type: application/json
+          Accept: application/json
+
+        Body:
         {
-          id: 1,
-          name: "Jalena Taylor",
-          bio: "If I had an instagram bio it would go here.",
-          instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db",
-          photo: "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
-          insta_url: "https://www.instagram.com/jalena.marie/",
-          facebook_url: null,
-          twitter_url: null,
-          created_at: "2019-07-20T19:26:26.643Z",
-          updated_at: "2019-07-20T19:26:26.643Z"
+        	"name": "Jalena Taylor",
+            "bio": "Aspiring queen",
+            "instagram_token": "15940466.b3445ea.b3e1d1e6",
+            "photo": "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+            "insta_url": "https://www.instagram.com/jalena.marie/",
+            "facebook_url": "facebook.com",
+            "twitter_url": "twitter.com"
         }
+
+        Sample Response:
+          Status: 200
+          Body:
+            {
+              "performer": {
+                  "id": 1,
+                  "name": "Jalena Taylor",
+                  "bio": "Aspiring queen",
+                  "instagram_token": "15940466.b3445ea.b3e1d1e6",
+                  "photo": "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+                  "insta_url": "https://www.instagram.com/jalena.marie/",
+                  "facebook_url": "facebook.com",
+                  "twitter_url": "twitter.com",
+                  "created_at": "2019-07-23T17:16:15.641Z",
+                  "updated_at": "2019-07-23T17:21:14.059Z"
+              }
+            }
+
+  #### DELETE http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/:id
+        Sample Response:
+          Status: 204 No Content
 
 ## Schema
 ![Database Schema](schema.png)
