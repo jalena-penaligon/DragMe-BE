@@ -10,7 +10,7 @@ class Api::V1::PerformersController < ApplicationController
     def create
       service = InstagramService.new(params[:performer][:instagram_token])
       user = service.get_user_data
-      performer = Performer.new(instagram_token: params[:performer][:instagram_token],
+      performer = Performer.new(instagram_token: params[:performer][:instagram_token].split('.')[0],
                                 bio: user[:bio],
                                 photo: user[:profile_picture],
                                 name: user[:full_name],
