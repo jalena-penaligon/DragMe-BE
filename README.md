@@ -1,5 +1,10 @@
 # Project: Drag Me Back End
 
+# DragMe
+#### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89),
+
+### [Front-End Respositry](https://github.com/dragmeturing/DragMe-FE)
+
 ## Production URL
 
 This API is available in production at http://dragme.us-east-2.elasticbeanstalk.com/
