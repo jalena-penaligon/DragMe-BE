@@ -2,6 +2,16 @@ require 'date'
 
 shows = Show.all
 venues = Venue.all
+show_performers = ShowPerformer.all
+performers = Performer.all
+
+show_performers.each do |show_performer|
+  show_performer.destroy
+end
+
+performers.each do |performer|
+  performer.destroy
+end
 
 shows.each do |show|
   show.destroy
