@@ -14,6 +14,8 @@ gem 'fast_jsonapi'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'figaro'
 gem 'faraday'
+gem 'bootstrap'
+gem 'jquery-rails'
 
 
 group :development, :test do
