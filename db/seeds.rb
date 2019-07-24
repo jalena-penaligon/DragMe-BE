@@ -34,9 +34,6 @@ vybe = Venue.create!(venue_name: "#VYBE", venue_google_id: "ChIJs4T9jil_bIcRCcy9
 
 # Drag Decades Re-occuring
 drag_decades_aug = clocktower.shows.create!(name: "Drag Decades with Shirley Delta Blow", date: DateTime.new(2019,8,2,20,00,0), description: "Shirley Delta Blow takes us on an epic journey back in time with her glitzy, glamorous show DRAG DECADES!", poster_url: "https://apps.cdnini.com/service/images/showbills/dbc56f0df94555215777af6ff737bd13_750x600.jpg", event_url: "http://www.clocktowercabaret.com/event/68c946c26fd78bb0b039389c2cc2486b")
-drag_decades_sep = clocktower.shows.create!(name: "Drag Decades with Shirley Delta Blow", date: DateTime.new(2019,9,6,20,00,0), description: "Shirley Delta Blow takes us on an epic journey back in time with her glitzy, glamorous show DRAG DECADES!", poster_url: "https://apps.cdnini.com/service/images/showbills/dbc56f0df94555215777af6ff737bd13_750x600.jpg", event_url: "http://www.clocktowercabaret.com/event/68c946c26fd78bb0b039389c2cc2486b")
-drag_decades_oct = clocktower.shows.create!(name: "Drag Decades with Shirley Delta Blow", date: DateTime.new(2019,10,04,20,00,0), description: "Shirley Delta Blow takes us on an epic journey back in time with her glitzy, glamorous show DRAG DECADES!", poster_url: "https://apps.cdnini.com/service/images/showbills/dbc56f0df94555215777af6ff737bd13_750x600.jpg", event_url: "http://www.clocktowercabaret.com/event/68c946c26fd78bb0b039389c2cc2486b")
-drag_decades_nov = clocktower.shows.create!(name: "Drag Decades with Shirley Delta Blow", date: DateTime.new(2019,11,01,20,00,0), description: "Shirley Delta Blow takes us on an epic journey back in time with her glitzy, glamorous show DRAG DECADES!", poster_url: "https://apps.cdnini.com/service/images/showbills/dbc56f0df94555215777af6ff737bd13_750x600.jpg", event_url: "http://www.clocktowercabaret.com/event/68c946c26fd78bb0b039389c2cc2486b")
 
 # Hamburger Mary's Re-occuring
 divas_brunch = hamburgermarys.shows.create!(name: "Divas Brunch", date: DateTime.new(2019,7,27,10,00,0), description: "Every Saturday DIVAS Brunch hits the stage at 11am and 2pm.", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2017/02/Good-Booty-Judy.jpg", event_url: "https://www.hamburgermarys.com/denver/events/event/saturday-mimosa-brunch/")
@@ -66,12 +63,6 @@ felony = Performer.create(name: "Felony Misdemeanor", photo: "https://slack-imgs
 
 # Show Performers
 shirley_dd_aug = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_aug.id)
-
-shirley_dd_sep = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_sep.id)
-
-shirley_dd_oct = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_oct.id)
-
-shirley_dd_nov = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_nov.id)
 
 evenlyn_brunch = ShowPerformer.create(performer_id: evelyn.id, show_id: divas_brunch.id)
 
