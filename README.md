@@ -350,7 +350,10 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
                   "email": "email@example.com"
                 }
             }
-        
+            
+  #### DELETE http://localhost:3000/api/v1/users/:id
+        Sample Response:
+          Status: 204 No Content      
 
 
 ## Schema
