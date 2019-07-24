@@ -42,25 +42,49 @@ drag_decades_nov = clocktower.shows.create!(name: "Drag Decades with Shirley Del
 divas_brunch = hamburgermarys.shows.create!(name: "Divas Brunch", date: DateTime.new(2019,7,27,10,00,0), description: "Every Saturday DIVAS Brunch hits the stage at 11am and 2pm.", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2017/02/Good-Booty-Judy.jpg", event_url: "https://www.hamburgermarys.com/denver/events/event/saturday-mimosa-brunch/")
 femmebots = hamburgermarys.shows.create!(name: "Femmebots with Electra Dupri", date: DateTime.new(2019,07,27,22,30,0), description: "Femmebots is Denver’s premier Saturday late night drag show! Hosted by community darling Electra Dupri this show is a Retro-futuristic with a comedic twist.", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2019/02/femmebots_Cover.jpg", event_url: "https://www.hamburgermarys.com/denver/events/event/femmebots-with-electra-dupri/")
 bellas = hamburgermarys.shows.create!(name: "Bella’s Cooter Catwalk", date: DateTime.new(2019,7,28,20,00,0), description: "Cooter Cat Walk! An all new high-fashion high energy Drag event. Hosted by Bella Couture-Le Cher with a rotating cast throwing high-fashion looks!", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2019/02/cooterSunday-1024x576.jpeg", event_url: "https://www.hamburgermarys.com/denver/events/event/bellas-cooter-catwalk/")
-maryoke = hamburgermarys.shows.create!(name: "Mary-OKE!", date: DateTime.new(2019,8,1,21,00,0), description: "Join your host Allison Young every Thursday night to sing your heart out!  Over 250,000 songs to choose from with great food and cocktails to keep you going.", poster_url: "https://www.hamburgermarys.com/denver/wp/wp-content/uploads/2018/01/MaryOke.jpg", event_url: "https://www.hamburgermarys.com/denver/events/event/mary-oke/")
 
 # Tracks Show
 dragnation = tracks.shows.create!(name: "Drag Nation Dynasty ft. Ra'Jah O'Hara", date: DateTime.new(2019,7,26,21,00,0), description: "The Nation's Best Drag Show with the Hottest Celebrity Drag Queens!", poster_url: "https://tracksdenver.com/wp-content/uploads/2019/06/07_26_DragNation_11x17-copy.jpg", event_url: "https://tracksdenver.com/event/drag-nation-2/")
 
 # Charlie's Show
 freshfish = charlies.shows.create!(name: "Fresh Fish Fridays", date: DateTime.new(2019,7,26,22,00,0), description: "Glow Fridays, free body painting, drag show in lounge at 11", poster_url: "https://www.charliesdenver.com/shared/images/weeklyspecial/659915/friday/", event_url: "https://www.charliesdenver.com/specials")
+
+# X Bar Show
+kailee_mykels_show = xbar.shows.create!(name: "The Kai Lee Mykels Show", date: DateTime.new(2019, 07, 28, 22, 30, 0), description: "Every Sunday, Kai Lee Mykels serves up a sickening sermon of love and light! It all goes down at 10:30 p.m. #queerchurch", poster_url: "https://images.squarespace-cdn.com/content/v1/53da8196e4b00a8492548e52/1540919322941-3DXX5O7GVD63Z513JVU8/ke17ZwdGBToddI8pDm48kHWJhM5OumnWkn-bJp56T597gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcL9jD0a5X9v0pRv3bkEBlbMdRGmLpxxWT_kpX2tG1kWONPeA8knsC0EEyRnv-0ugw/TheKaiLeeMykelsShowUPDATED.jpg", event_url: "http://www.xbardenver.com/#upcomingevents-section")
+
 # drag_decades_nov = hamburgermarys.shows.create!(name: "", date: DateTime.new(2019, 11, 01, 20, 00, 0), description: "", poster_url: "", event_url: "")
 
-# Default Performer
-performer = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
+# Performers
+rajah = Performer.create(name: "Ra'jah O'Hara", bio: "Extra! Extra! Read all about it! Ra'Jah O'Hara's in the house and I hope you came to play.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dude", insta_url: "https://www.instagram.com/therajahoharashow/?hl=en", facebook_url: "https://www.facebook.com/benni.miller", twitter_url: "https://twitter.com/rajahohara?lang=en" )
+shirley = Performer.create(name: "Shirley Delta Blow", bio: "Just a small town girl with big city dreams.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dudette", insta_url: "http://www.shirleydeltablow.com/?fbclid=IwAR2EblwpM5pgc_QOPYnmxJQzkGT6KwoanoZI5HWzlyZ_jbxPdxUPsfZ5LjA", facebook_url:"https://www.facebook.com/shirleydeltablow/", twitter_url: "www.shedoesntblow.com")
+evelyn = Performer.create(name: "Evelyn Evermore", bio: "Denver's Comedic Entertainer of 2018. Ultimate Queen 2017. Host, performer, human meat snack.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057evenlyn", insta_url: "https://www.instagram.com/evelynevermoore/", facebook_url:"https://www.facebook.com/evelynevermoore", twitter_url: "htts://twitter.com/evenlynevermore")
+kailee = Performer.create(name: "Kai Lee Mykles", bio: "Working as a choir director by day, this experience has really taught her how to put on a show and expands her love for performance.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057lady", insta_url: "https://www.instagram.com/kaileemykels/", facebook_url: "https://www.facebook.com/KaiLeeMykels", twitter_url: "https://twitter.com/kaileemykels")
+electra = Performer.create(name: "Electra Dupri", bio: "Miss SC Minnesota Pride. 2006 UQC All Star Winner '12", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057electra", insta_url: "https://www.instagram.com/theelectradupri/", facebook_url: "https://www.facebook.com/electradupri", twitter_url: "https://twitter.com/theelectradupri")
+bella = Performer.create(name: "Bella Couture-Le Cher", bio: "#DragQueen #Drag #DenverDrag #MakeUp", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057bella", insta_url: "https://www.instagram.com/bellacouturelecher/", facebook_url: "https://www.facebook.com/bellaclecher", twitter_url: "https://twitter.com/bellaclecher")
+andreastaxxx = Performer.create(name: "Andrea StaxXx", bio: "Resident Queen at Charlie's", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057andrea", insta_url: "https://www.instagram.com/andrea.staxx.x/", facebook_url: "https://www.facebook.com/andrea.staxx.x/", twitter_url: "https://twitter.com/andrea.staxx.x/")
+felony = Performer.create(name: "Felony Misdemeanor", bio: "Serving some delicious and raunchy realness during Sunday Funday brunch at Steuben's Uptown. Bring earmuffs for the kiddos cause these queens entertain at a rating well above PG-13!" , instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057bruh", insta_url: "https://www.instagram.com/felony_misdemeanor/?hl=en", facebook_url: "https://www.facebook.com/events/steubens-uptown/steubens-drag-brunch-with-felony-misdemeanor/2242784222600344/" , twitter_url: "https://twitter.com/felonym?lang=en")
 
-# Extra Performers
-performer_1 = Performer.create(name: "Ra'jah O'Hara", bio: "Extra! Extra! Read all about it! Ra'Jah O'Hara's in the house and I hope you came to play.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dude", insta_url: "https://www.instagram.com/therajahoharashow/?hl=en", facebook_url: "https://www.facebook.com/benni.miller", twitter_url: "https://twitter.com/rajahohara?lang=en" )
-performer_2 = Performer.create(name: "Shirley Delta Blow", bio: "Just a small town girl with big city dreams.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dudette", insta_url: "http://www.shirleydeltablow.com/?fbclid=IwAR2EblwpM5pgc_QOPYnmxJQzkGT6KwoanoZI5HWzlyZ_jbxPdxUPsfZ5LjA", facebook_url:"https://www.facebook.com/shirleydeltablow/", twitter_url: "www.shedoesntblow.com")
-performer_3 = Performer.create(name: "Kai Lee Mykles", bio: "Working as a choir director by day, this experience has really taught her how to put on a show and expands her love for performance.", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057lady", insta_url: "https://www.instagram.com/kaileemykels/", facebook_url: "https://www.facebook.com/KaiLeeMykels", twitter_url: "https://twitter.com/kaileemykels")
-performer_4 = Performer.create(name: "Felony Misdemeanor", bio: "Serving some delicious and raunchy realness during Sunday Funday brunch at Steuben's Uptown. Bring earmuffs for the kiddos cause these queens entertain at a rating well above PG-13!" , instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057bruh", insta_url: "https://www.instagram.com/felony_misdemeanor/?hl=en", facebook_url: "https://www.facebook.com/events/steubens-uptown/steubens-drag-brunch-with-felony-misdemeanor/2242784222600344/" , twitter_url: "https://twitter.com/felonym?lang=en")
+# Show Performers
+shirley_dd_aug = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_aug.id)
 
-performer_show = ShowPerformer.create(performer_id: performer.id, show_id: dragnation.id)
+shirley_dd_sep = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_sep.id)
+
+shirley_dd_oct = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_oct.id)
+
+shirley_dd_nov = ShowPerformer.create(performer_id: shirley.id, show_id: drag_decades_nov.id)
+
+evenlyn_brunch = ShowPerformer.create(performer_id: evelyn.id, show_id: divas_brunch.id)
+
+electra_femmebots = ShowPerformer.create(performer_id: electra.id, show_id: femmebots.id)
+
+bella_bellas = ShowPerformer.create(performer_id: bella.id, show_id: bellas.id)
+
+rajah_dragnation = ShowPerformer.create(performer_id: rajah.id, show_id: dragnation.id)
+
+andrea_ff = ShowPerformer.create(performer_id: andreastaxxx.id, show_id: freshfish.id)
+
+kai_kailee = ShowPerformer.create(performer_id: kailee.id, show_id: kailee_mykels_show.id)
+
 
 # User
 user = User.create(email: "Jacob@example.com", password_digest: "password", api_key: "fakekey" )
