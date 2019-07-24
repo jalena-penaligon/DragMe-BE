@@ -1,7 +1,14 @@
 # Project: Drag Me Back End
 
+![TravisCI Bage](https://travis-ci.org/jalena-penaligon/DragMe-BE.svg?branch=master)
+
+
 # DragMe
-#### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89),
+#### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89)
+
+### Description 
+
+The Back End respository for a React Native app connecting local drag fans to local drag shows.
 
 ### [Front-End Respositry](https://github.com/dragmeturing/DragMe-FE)
 
@@ -316,6 +323,35 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
   #### DELETE http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/:id
         Sample Response:
           Status: 204 No Content
+
+  #### GET http://localhost:3000/api/v1/users
+        Headers:
+          Content-Type: application/json
+          Accept: application/json
+
+        Body:
+          {
+            "id": "1",
+            "type": "user",
+            "attributes": {
+              "password_digest": "password",
+              "email": "email@example.com"
+            }
+          }
+
+        Sample Response:
+          Status: 200
+          Body:
+              {
+                "id": "1",
+                "type": "user",
+                "attributes": {
+                  "password_digest": "password",
+                  "email": "email@example.com"
+                }
+            }
+        
+
 
 ## Schema
 ![Database Schema](schema.png)
