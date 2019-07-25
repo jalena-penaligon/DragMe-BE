@@ -62,4 +62,23 @@ describe "Performers API" do
     expect(performer["name"]).to eq("Vivacious")
   end
 
+  it 'can udpdate a performer' do
+    performer1 = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
+
+    body = {performer: {
+            name: "Jalena Taylor",
+            bio: "Bio",
+            instagram_token: "15940466",
+            photo: "https://scontent.cdninstagram.com/vp/30bbcdc8dc17ab462a2fb783fff7b792/5DEB6FE6/t51.2885-19/s150x150/41260479_327121834723589_5167495760517791744_n.jpg?_nc_ht=scontent.cdninstagram.com",
+            insta_url: "https://www.instagram.com/jalena.marie/",
+            facebook_url: "facebook.com",
+            twitter_url: "twitter.com"
+        }}
+    put "/api/v1/performers/#{performer1.id}", params: body
+    performer1.reload
+    
+    expect(response).to be_successful
+    expect(performer1.name).to eq("Jalena Taylor")
+  end
+
 end
