@@ -1,6 +1,6 @@
 # Project: Drag Me Back End
 
-![TravisCI Bage](https://travis-ci.org/jalena-penaligon/DragMe-BE.svg?branch=master)
+![TravisCI Badge](https://travis-ci.org/jalena-penaligon/DragMe-BE.svg?branch=master)
 
 
 # DragMe
@@ -350,7 +350,7 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
                   "email": "email@example.com"
                 }
             }
-            
+
   #### DELETE http://localhost:3000/api/v1/users/:id
         Sample Response:
           Status: 204 No Content      
