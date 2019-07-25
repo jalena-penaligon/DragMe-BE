@@ -1,7 +1,14 @@
 # Project: Drag Me Back End
 
+![TravisCI Badge](https://travis-ci.org/jalena-penaligon/DragMe-BE.svg?branch=master)
+
+
 # DragMe
-#### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89),
+#### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89)
+
+### Description 
+
+The Back End respository for a React Native app connecting local drag fans to local drag shows.
 
 ### [Front-End Respositry](https://github.com/dragmeturing/DragMe-FE)
 
@@ -158,6 +165,19 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
   #### DELETE http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues/:id
         Sample Response:
           Status: 204 No Content
+
+  #### POST http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues/:id
+        Sample Response: 
+                  {
+            "name": "Drag Decades with Shirley Delta Blow",
+            "date": "2019-11-01T20:00:00.000Z",
+            "description": "Shirley Delta Blow takes us on an epic journey back in time with her glitzy, glamorous show DRAG DECADES!",
+            "event_url": "http://www.clocktowercabaret.com/event/68c946c26fd78bb0b039389c2cc2486b",
+            "poster_url": "https://apps.cdnini.com/service/images/showbills/dbc56f0df94555215777af6ff737bd13_750x600.jpg",
+            "venue_id": 1,
+            "created_at": "2019-07-23T22:56:23.445Z",
+            "updated_at": "2019-07-23T22:56:23.445Z"
+        }
 
   #### GET http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues/:id/shows
       Sample Response:
@@ -316,6 +336,44 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
   #### DELETE http://dragme.us-east-2.elasticbeanstalk.com/api/v1/performers/:id
         Sample Response:
           Status: 204 No Content
+
+  #### GET http://localhost:3000/api/v1/users
+        Headers:
+          Content-Type: application/json
+          Accept: application/json
+
+        Body:
+          {
+            "id": "1",
+            "type": "user",
+            "attributes": {
+              "password_digest": "password",
+              "email": "email@example.com"
+            }
+          }
+
+        Sample Response:
+          Status: 200
+          Body:
+              {
+                "id": "1",
+                "type": "user",
+                "attributes": {
+                  "password_digest": "password",
+                  "email": "email@example.com"
+                }
+            }
+
+  #### DELETE http://localhost:3000/api/v1/users/:id
+        Sample Response:
+          Status: 204 No Content      
+
+#### DELETE 
+All delete endpoints should return as 
+
+        Sample Response:
+          Status: 204 No Content      
+
 
 ## Schema
 ![Database Schema](schema.png)
