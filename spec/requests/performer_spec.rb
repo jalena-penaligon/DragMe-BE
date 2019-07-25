@@ -30,11 +30,36 @@ describe "Performers API" do
   it 'can delete a performer' do
     performer1 = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057d0db", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
     performer2 = Performer.create(name: "Bootylicious", bio: "Best queen in town!", instagram_token: "15940466.b3445ea.f5eaa7f9acf243d7bb658a6ca057dude", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
-    
+
     delete "/api/v1/performers/#{performer1.id}"
 
     expect(response).to be_successful
     expect(Performer.all.count).to eq(1)
+  end
+
+  it 'can create a performer by instagram token' do
+    body = {performer: {
+      instagram_token: "15940466.b3445ea.b3e1d1e5e3fa4c76968cfcf6cdb3a6c3"
+    }}
+    post "/api/v1/performers/", params: body
+
+    expect(response).to be_successful
+    performer = JSON.parse(response.body)
+    expect(performer["instagram_token"]).to eq("15940466")
+  end
+
+  it 'can return a performer by instagram token' do
+    performer1 = Performer.create(name: "Vivacious", bio: "Best queen in town!", instagram_token: "15940466", insta_url: "https://www.instagram.com/naomismalls/", facebook_url: "www.facebook.com", twitter_url: "www.twitter.com")
+
+    body = {performer: {
+      instagram_token: "15940466.b3445ea.b3e1d1e5e3fa4c76968cfcf6cdb3a6c3"
+    }}
+    post "/api/v1/performers/", params: body
+
+    expect(response).to be_successful
+    performer = JSON.parse(response.body)
+    expect(performer["instagram_token"]).to eq("15940466")
+    expect(performer["name"]).to eq("Vivacious")
   end
 
 end

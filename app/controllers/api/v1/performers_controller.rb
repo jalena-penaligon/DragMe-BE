@@ -18,7 +18,7 @@ class Api::V1::PerformersController < ApplicationController
       if performer.save
         render json: performer
       else
-        performer = Performer.find_by(instagram_token: params[:performer][:instagram_token])
+        performer = Performer.find_by(instagram_token: params[:performer][:instagram_token].split('.')[0])
         render json: performer
       end
     end
