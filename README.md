@@ -6,9 +6,9 @@
 # DragMe
 #### By [Jalena Taylor](https://github.com/jalena-penaligon), [Bridgett Coyle](https://github.com/B-Coyle) & [Jacob Bogart](https://github.com/jacobogart), [Kristen Hallstrom](https://github.com/Klhalls89)
 
-### Description 
+### Description
 
-The Back End respository for a React Native app connecting local drag fans to local drag shows.
+The repository is the Back End infrastructure for a React Native app called Drag Me. Drag Me connects drag fans to local drag shows.
 
 ### [Front-End Respositry](https://github.com/dragmeturing/DragMe-FE)
 
@@ -167,7 +167,7 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
           Status: 204 No Content
 
   #### POST http://dragme.us-east-2.elasticbeanstalk.com/api/v1/venues/:id
-        Sample Response: 
+        Sample Response:
                   {
             "name": "Drag Decades with Shirley Delta Blow",
             "date": "2019-11-01T20:00:00.000Z",
@@ -368,8 +368,8 @@ This API is available in production at http://dragme.us-east-2.elasticbeanstalk.
         Sample Response:
           Status: 204 No Content      
 
-#### DELETE 
-All delete endpoints should return as 
+#### DELETE
+All delete endpoints should return as
 
         Sample Response:
           Status: 204 No Content      
