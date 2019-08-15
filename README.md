@@ -10,7 +10,7 @@
 
 The repository is the Back End infrastructure for a React Native app called Drag Me. Drag Me connects drag fans to local drag shows.
 
-### [Front-End Respositry](https://github.com/dragmeturing/DragMe-FE)
+### [Front-End Respository](https://github.com/dragmeturing/DragMe-FE)
 
 ## Production URL
 
